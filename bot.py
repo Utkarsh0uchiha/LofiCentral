@@ -58,13 +58,7 @@ async def button_click_handler(update: Update, context: ContextTypes.DEFAULT_TYP
 
         await render_screen_2(query.message, db, key)
 
-
-
-def main():
-    if not BOT_TOKEN:
-        print("BOT_TOKEN is missing, add it in .env file.")
-        return
-
+def create_application():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
 
     # Register the /start command
@@ -94,10 +88,15 @@ def main():
 
     app.add_handler(MessageHandler(filters.COMMAND, fallback_handler))
 
-    
+    return app
 
+app = create_application()
+def main():
+    if not BOT_TOKEN:
+        print("BOT_TOKEN is missing, add it in .env file.")
+        return
     print("BOT is running....")
-    app.run_polling()
+   
 
 
 if __name__ == "__main__":
