@@ -1,4 +1,7 @@
 from fastapi import FastAPI, Request
+from bot import application
+from telegram import Update
+
 
 app = FastAPI()
 
@@ -7,7 +10,13 @@ async def health_check():
     return {"status": "OK"}
 
 @app.post("/webhook")
-async def telegram_webhool(request : Request):
+async def telegram_webhook(request : Request):
+    print("WEBHOOK HIT")
     data = await request.json()
-    print(data)
-    return {"status": "received"}
+    update = Update.de_json(data, application.bot)
+    await application.process_update(update)
+    return {"status": "ok"}
+
+@app.on_event("startup")
+async def on_startup():
+    await application.initialize()

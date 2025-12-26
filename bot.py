@@ -90,7 +90,7 @@ def create_application():
 
     return app
 
-app = create_application()
+application = create_application()
 def main():
     if not BOT_TOKEN:
         print("BOT_TOKEN is missing, add it in .env file.")
