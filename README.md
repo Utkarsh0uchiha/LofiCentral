@@ -17,20 +17,20 @@ It is built with a clean, scalable, **webhook-based architecture** and is design
 ---
 
 ## 📸 Screenshots
+_Glimpse of the `LofiCentral` interface._
 
-> _(Glimpse of the `LofiCentral` interface.)_
 
-### Start & Vibe Selection
-![Start Screen](Screenshots/start.jpeg)
+<p align="center">
+  <img src="Screenshots/start.jpeg" width="30%" alt="Start Screen"/>
+  <img src="Screenshots/playlists.jpeg" width="30%" alt="Playlist Screen"/>
+  <img src="Screenshots/details.jpeg" width="30%" alt="Playlist Details"/>
+</p>
 
-### Playlist Recommendations
-![Playlist Screen](Screenshots/playlists.jped)
-
-### Playlist Details
-![Playlist Details](Screenshots/details.jpeg)
+<p align="center">
+  Start & Vibe Selection • Playlist Recommendations • Playlist Details
+</p>
 
 ---
-
 ## 🖥 Screens & Flow
 
 ### Screen 1 — Vibe Selection
