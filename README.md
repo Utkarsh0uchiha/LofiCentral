@@ -21,13 +21,13 @@ It is built with a clean, scalable, **webhook-based architecture** and is design
 > _(Glimpse of the `LofiCentral` interface.)_
 
 ### Start & Vibe Selection
-![Start Screen](screenshots/start.png)
+![Start Screen](screenshots/start.jpeg)
 
 ### Playlist Recommendations
-![Playlist Screen](screenshots/playlists.png)
+![Playlist Screen](screenshots/playlists.jped)
 
 ### Playlist Details
-![Playlist Details](screenshots/details.png)
+![Playlist Details](screenshots/details.jpeg)
 
 ---
 
