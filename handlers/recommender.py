@@ -2,7 +2,7 @@ import json
 import random
 from telegram import Update
 from telegram.ext import ContextTypes
-
+from utils.smart import choose_weighted_playlist
 KEYWORDS = {
     "chill": ["chill", "calm", "relax", "soft"],
     "study": ["study", "focus", "work", "concentrate", "exam"],
@@ -42,7 +42,7 @@ async def recommender_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
     selected_tag = matched_tags[0]
 
     # pick a random playlist from that category
-    playlist = random.choice(db[selected_tag])
+    playlist = choose_weighted_playlist(db[selected_tag])
 
     title = playlist["title"]
     link = playlist["spotify"]
